@@ -157,7 +157,7 @@ class Commande:
         print(f"{'='*45}")
         for b in self.boissons:
             print(f"  - {b.description()} : {b.cout():.1f}€")
-        print(f"{'─'*45}")
+        print(f"{'-'*45}")
         print(f"  TOTAL : {self.prix_total():.1f}€")
         print(f"{'='*45}")
 
@@ -171,7 +171,7 @@ class CommandeSurPlace(Commande):
         print(f"{'='*45}")
         for b in self.boissons:
             print(f"  - {b.description()} : {b.cout():.1f}€")
-        print(f"{'─'*45}")
+        print(f"{'-'*45}")
         print(f"  TOTAL : {self.prix_total():.1f}€")
         print(f"  Service en salle inclus.")
         print(f"{'='*45}")
@@ -186,7 +186,7 @@ class CommandeEmporter(Commande):
         print(f"{'='*45}")
         for b in self.boissons:
             print(f"  - {b.description()} : {b.cout():.1f}€")
-        print(f"{'─'*45}")
+        print(f"{'-'*45}")
         print(f"  TOTAL : {self.prix_total():.1f}€")
         print(f"  Emballage eco-friendly fourni.")
         print(f"{'='*45}")
@@ -205,8 +205,8 @@ class Fidelite:
         """Ajoute des points de fidélité au client selon le montant."""
         points_gagnes = int(montant * self.POINTS_PAR_EURO)
         client.points_fidelite += points_gagnes
-        print(f"\n  ★ {points_gagnes} points ajoutés à {client.nom}.")
-        print(f"  ★ Total points : {client.points_fidelite} pts")
+        print(f"\n  * {points_gagnes} points ajoutés à {client.nom}.")
+        print(f"  * Total points : {client.points_fidelite} pts")
 
 
 class CommandeFidele(Commande, Fidelite):
